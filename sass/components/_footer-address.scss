@@ -1,0 +1,29 @@
+.footer__address {
+    font-style: normal;
+    width: 231px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.footer__address-text {
+    color: $main-white-color;
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+
+.footer__address-link {
+    color: $signature-color;
+    display: inline-block;
+
+    transition: color $main-transition-time $main-transition-function;
+
+    &:hover,
+    &:focus {
+    color: $action-color;
+}
+}
+
+.footer__address-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+

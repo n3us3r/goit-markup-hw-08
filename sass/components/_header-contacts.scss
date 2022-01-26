@@ -1,0 +1,21 @@
+.header__contacts-list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header__contacts-item:not(:last-child) {
+    margin-right: 48px;
+}
+
+.header__contacts-link  {
+    color: $secondary-text-color;
+    transition: color $main-transition-time $main-transition-function;
+}
+
+.header__envelope-icon,
+.header__phone-icon {
+    margin-right: 10px;
+    cursor: pointer;
+    fill: currentColor;
+}

@@ -1,0 +1,35 @@
+.footer__subscribe {
+    margin-left: auto;
+}
+
+.footer__subscribe-form {
+    display: flex;
+}
+
+.footer__subscribe-input {
+    width: 358px;
+    background-color: transparent;
+    margin-right: 12px; 
+    border: 1px solid rgba(255, 255, 255, 0.3);;
+    color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding-left: 16px;
+
+    transition: border-color $main-transition-time $main-transition-function;
+
+    &:focus,
+    &:hover {
+        border-color: $action-color;
+    }
+}
+
+.footer__subscribe-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__subscribe-icon {
+    margin-left: 10px;
+}

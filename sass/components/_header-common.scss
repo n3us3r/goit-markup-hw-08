@@ -1,0 +1,18 @@
+.header__contacts-link,
+.navigation__link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.navigation__link:hover,
+.navigation__link:focus,
+.header__contacts-link:hover,
+.header__contacts-link:focus {
+    color: $action-color;
+}

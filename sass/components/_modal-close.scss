@@ -1,0 +1,28 @@
+.modal__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $main-white-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+
+    transition: border-color $main-transition-time $main-transition-function;
+
+        &:hover,
+        &:focus {
+        color: $action-color;
+        border-color: $action-color;
+        }
+}
+
+.modal__close-icon {
+    width: 11px;
+    height: 11px;
+    fill: currentColor;
+    
+    transition: color $main-transition-time $main-transition-function;
+}

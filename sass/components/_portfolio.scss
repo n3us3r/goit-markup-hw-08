@@ -1,0 +1,21 @@
+.portfolio__content {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.portfolio__card-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+.portfolio__card-item {
+    display: block;
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-basis: calc(100% / 3 - 30px);
+
+    // transition: box-shadow $main-transition-time $main-transition-function;
+}

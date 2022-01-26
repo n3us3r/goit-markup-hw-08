@@ -1,0 +1,12 @@
+.benefits__content {
+    padding-top: 107px;
+    padding-bottom: 94px;
+}
+
+.benefits__list {
+    display: flex;
+}
+
+.benefits__item:not(:last-child) {
+    margin-right: 30px;
+}
