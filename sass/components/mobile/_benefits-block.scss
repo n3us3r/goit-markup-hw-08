@@ -1,7 +1,11 @@
 .benefits-card {
-    display: inline-block;
     
-    width: 100%;
+    @media screen and (min-width: 480px) {
+        display: block;
+    
+        // width: 100%;
+    }
+    
 
     @media screen and (min-width: 768px) {
         width: 100%;
