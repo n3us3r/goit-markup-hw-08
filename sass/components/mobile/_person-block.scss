@@ -1,19 +1,30 @@
 .person {
     display: block;
 
+        // @media screen and (min-width: $tablet) {
+        //     display: inline-block;
+        // }
+
+        // @media screen and (min-width: $desktop) {
+        //     display: inline-block;
+        // }
+
+    &__meta {
+        text-align: center;
+        background-color: $main-white-color;
+        
+        @media screen and (min-width: $mobile) {
+            padding: 30px 122px 24px;
+        }
+
         @media screen and (min-width: $tablet) {
-            display: inline-block;
+            padding: 30px 74px 24px;
         }
 
         @media screen and (min-width: $desktop) {
-            display: inline-block;
+            padding: 30px 32px;
         }
 
-    &__meta {
-        padding: 30px 32px;
-    
-        text-align: center;
-        background-color: $main-white-color;
     }
     
     &__name {

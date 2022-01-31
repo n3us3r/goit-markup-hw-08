@@ -4,54 +4,49 @@
         &__content {
             padding-top: 60px;
             padding-bottom:60px;
-        
-            @media screen and (min-width: $tablet) {
-                    padding-top: 60px;
-                    padding-bottom:60px;
-            }
 
             @media screen and (min-width: $desktop) {
-                    padding-top: 94px;
-                    padding-bottom: 94px;
+                padding-top: 94px;
+                padding-bottom: 94px;
             }
         }
     
     &__title {
         margin-top: 0;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 50px;
+        }
     }
     
     &__list {
-
+        @media screen and (min-width: $tablet) {
+            display: flex;
+        }
 
         @media screen and (min-width: $tablet) and (max-width: 1199px) {
-            display: flex;
             flex-wrap: wrap;
-
             margin-top: -30px;
             margin-left: -30px;
-        }
-
-        @media screen and (min-width: $desktop) {
-            display: flex;
-        }
+        }        
         
     }
         
     &__item {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
         @media screen and (min-width: $tablet) and (max-width: 1199px) {
             width: calc((100% - 2 * 30) / 2);
             margin-top: 30px;
             margin-left: 30px;
         }
-
-        @media screen and (min-width: $desktop) {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
-        
         
         &:not(:last-child) {
+
+            @media screen and (max-width: 767px) {
+                margin-bottom: 30px;
+            }
+
             @media screen and (min-width: $desktop) {
                 margin-right: 30px;    
             }

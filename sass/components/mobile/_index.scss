@@ -1,14 +1,15 @@
 @import "./body";
+@import "./header-menu";
 @import "./header";
 @import "./logo";
 @import "./header-common";
 @import "./navigation";
 @import "./header-contacts";
+@import "./title";
 @import "./hero";
 @import "./btn";
 @import "./benefits";
 @import "./benefits-block";
-@import "./title";
 @import "./what-we-do";
 @import "./activity-block";
 @import "./team";
@@ -19,8 +20,8 @@
 @import "./footer-address";
 @import "./footer-join-us";
 @import "./footer-subscribe";
-// @import "./portfolio";
-// @import "./product-block";
+@import "./portfolio";
+@import "./product-block";
 @import "./backdrop";
 @import "./modal";
 @import "./modal-comment";

@@ -1,21 +1,3 @@
-.benefits-card {
-    
-    @media screen and (min-width: 480px) {
-        display: block;
-    
-        // width: 100%;
-    }
-    
-
-    @media screen and (min-width: 768px) {
-        width: 100%;
-    }
-
-    @media screen and (min-width: 1200px) {
-        width: 270px;
-    }
-}
-
 .benefits-card__icon-box {
     display: flex;
     justify-content: center;

@@ -1,0 +1,84 @@
+.portfolio__content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    // @media screen and (max-width: 767px) {
+    //     margin-left: -8px;
+    // }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;        
+    }
+}
+
+.portfolio__btn-list {
+    display: flex;
+    justify-content: center;
+    
+    @media screen and (max-width: 767px) {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .portfolio__btn-item {
+        
+        margin-bottom: 15px;
+    }
+    // .portfolio__btn-item:nth-child(4n),
+    // .portfolio__btn-item:nth-child(5n) {
+    //     margin-top: 15px;
+    // }
+}
+
+.portfolio__btn-item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+        margin-right: 8px;
+    }
+}
+
+.portfolio__btn-item:not(:first-child) {
+    @media screen and (min-width: $tablet) {
+        margin-left: 8px;
+    }
+
+}
+
+.portfolio__card-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: -30px;
+
+    @media screen and (min-width: $tablet) {
+        margin-left: -30px;
+    }
+}
+
+.portfolio__card-item {
+    display: block;
+    
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $tablet) {
+        margin-left: 30px;
+        flex-basis: calc((100% - 2 * 30px) / 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 30px;
+        flex-basis: calc((100% - 3 * 30px) / 3);
+    }
+
+
+    // transition: box-shadow $main-transition-time $main-transition-function;
+}

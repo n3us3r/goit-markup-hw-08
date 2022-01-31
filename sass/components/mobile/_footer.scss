@@ -17,22 +17,30 @@
 }
 .footer__container-tablet {
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: $tablet) {
         display: flex;
-        justify-content: space-around;
         align-items: baseline;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        // justify-content: space-around;
+        margin-bottom: 60px;
+    }
+
+    
+}
+
+// =========================================================
+// Пункт ниже - относительно макета 
+// =========================================================
+.footer__container-address {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-left: 61px;
     }
 
     @media screen and (min-width: 1200px) {
-        display: flex;
-        align-items: baseline;
+        text-align: left;
     }
-
-    .footer__container-address {
-        @media screen and (min-width: 1200px) {
-            text-align: left;
-        }
-        
-    }
+    
 }
 
