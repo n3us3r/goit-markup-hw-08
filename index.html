@@ -27,7 +27,7 @@
                 </a>
 
                 <button class="header__menu-button" data-menu-button type="button">
-                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <svg class="header__menu-icon" width="40" height="40" aria-label="Переключатель мобильного меню">
                         <use class="icon-menu" xlink:href="./images/icons.svg#menu"></use>
                         <use class="icon-cross" xlink:href="./images/icons.svg#cross"></use>
                     </svg>
@@ -80,13 +80,21 @@
                                 </ul>
                                 <ul class="header__contacts-communications-list list">
                                     <li class="header__contacts-communications-item item">
-                                        <a class="link" href="">Instagram</a></li>
+                                        <a class="header__contacts-communications-link" href="">
+                                            Instagram
+                                        </a></li>
                                     <li class="header__contacts-communications-item item">
-                                        <a class="link" href="">Twitter</a></li>
+                                        <a class="header__contacts-communications-link" href="">
+                                            Twitter
+                                            </a></li>
                                     <li class="header__contacts-communications-item item">
-                                        <a class="link" href="">Facebook</a></li>
+                                        <a class="header__contacts-communications-link" href="">
+                                            Facebook
+                                        </a></li>
                                     <li class="header__contacts-communications-item item">
-                                        <a class="link" href="">Linkedin</a></li>
+                                        <a class="header__contacts-communications-link" href="">
+                                            Linkedin
+                                        </a></li>
 
                                 </ul>
                     </div>
@@ -196,7 +204,11 @@
                         <ul class="what-we-do__list list">
                             <li class="what-we-do__item">
                                 <article class="activity">
-                                    <img src="./images/what-we-do-1.jpg" alt="Программист пишет код на клавиатуре" width="370"/>
+                                    <picture>
+                                        <source srcset="./images/what-we-do/1200/what-we-do1-1200.jpg 1x, ./images/what-we-do/1200/what-we-do1-1200@2x.jpg 2x">
+                                        <img src="./images/what-we-do/1200/what-we-do1-1200.jpg" alt="Программист пишет код на клавиатуре" width="370"/>
+                                    </picture>
+                                    
                                     <div class="activity__overlay">
                                         <p class="activity__text">Десктопные приложения</p>
                                     </div>
@@ -205,7 +217,11 @@
 
                             <li class="what-we-do__item">
                                 <article class="activity">
-                                    <img src="./images/what-we-do-2.jpg" alt="Тестировщик проверяет изображение на телефоне" width="370"/>
+                                    <picture>
+                                        <source srcset="./images/what-we-do/1200/what-we-do2-1200.jpg 1x, ./images/what-we-do/1200/what-we-do2-1200@2x.jpg 2x">
+                                    <img src="./images/what-we-do/1200/what-we-do2-1200.jpg" alt="Тестировщик проверяет изображение на телефоне" width="370"/>
+                                    </picture>
+                                    
                                     <div class="activity__overlay">
                                         <p class="activity__text">Мобильные приложения</p>
                                     </div>
@@ -214,7 +230,11 @@
 
                             <li class="what-we-do__item">
                                 <article class="activity">
-                                    <img src="./images/what-we-do-3.jpg" alt="Палитра цветов в виде ромба на экране планшета" width="370" />
+                                    <picture>
+                                        <source srcset="./images/what-we-do/1200/what-we-do3-1200.jpg 1x, ./images/what-we-do/1200/what-we-do3-1200@2x.jpg 2x">
+                                    <img src="./images/what-we-do/1200/what-we-do3-1200.jpg" alt="Палитра цветов в виде ромба на экране планшета" width="370" />
+                                    </picture>
+                                    
                                     <div class="activity__overlay">
                                         <p class="activity__text">Дизайнерские решения</p>
                                     </div>
@@ -236,7 +256,15 @@
                         
                             <li class="team__item">
                                 <article class="person">
-                                        <img src="./images/team-member1.jpg" alt="Фотография продукт дизайнера" width="270"/>
+                                    <picture>
+                                        <source srcset="./images/team/1200/team1-1200.jpg 1x, ./images/team/1200/team1-1200@2x.jpg 2x" media="(min-width: 1200px)">
+                                        <source srcset="./images/team/768/team1-768.jpg 1x, ./images/team/768/team1-768@2x.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/team/480/team1-480.jpg 1x, ./images/team/480/team1-480@2x.jpg 2x" media="(max-width: 767px)">
+                                        
+                                        
+                                        <img src="./images/team/480/team1-480.jpg" alt="Фотография продукт дизайнера"/>
+                                    </picture>
+                                        
                                 
                                     <div class="person__meta">
                                         <h3 class="person__name">Игорь Демьяненко</h3>
@@ -285,7 +313,13 @@
                             
                             <li class="team__item">
                                 <article class="person">
-                                    <img src="./images/team-member2.jpg" alt="Фотография фронтенд разработчика" width="270"/>
+                                    <picture>
+                                        <source srcset="./images/team/1200/team2-1200.jpg 1x, ./images/team/1200/team2-1200@2x.jpg 2x" media="(min-width: 1200px)">
+                                        <source srcset="./images/team/768/team2-768.jpg 1x, ./images/team/768/team2-768@2x.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/team/480/team2-480.jpg 1x, ./images/team/480/team2-480@2x.jpg 2x" media="(max-width: 767px)">
+                                        <img src="./images/team/480/team2-480.jpg" alt="Фотография продукт дизайнера"/>
+                                    </picture>
+                                    <!-- <img src="./images/team/1200/team2-1200.jpg" alt="Фотография фронтенд разработчика" width="270"/> -->
 
                                 <div class="person__meta">
                                     <h3 class="person__name">Ольга Репина</h3>
@@ -336,7 +370,13 @@
                             
                             <li class="team__item">
                                 <article class="person">
-                                    <img src="./images/team-member3.jpg" alt="Фотография маркетолога" width="270"/>
+                                    <picture>
+                                        <source srcset="./images/team/1200/team3-1200.jpg 1x, ./images/team/1200/team3-1200@2x.jpg 2x" media="(min-width: 1200px)">
+                                        <source srcset="./images/team/768/team3-768.jpg 1x, ./images/team/768/team3-768@2x.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/team/480/team3-480.jpg 1x, ./images/team/480/team3-480@2x.jpg 2x" media="(max-width: 767px)">
+                                        <img src="./images/team/480/team3-480.jpg" alt="Фотография продукт дизайнера"/>
+                                    </picture>
+                                    <!-- <img src="./images/team/1200/team3-1200.jpg" alt="Фотография маркетолога" width="270"/> -->
                                 
                                     <div class="person__meta">
                                         <h3 class="person__name">Николай Тарасов</h3>
@@ -385,7 +425,13 @@
                             
                             <li class="team__item">
                                 <article class="person">
-                                    <img src="./images/team-member4.jpg" alt="Фотография дизайнера" width="270"/>
+                                    <picture>
+                                        <source srcset="./images/team/1200/team4-1200.jpg 1x, ./images/team/1200/team4-1200@2x.jpg 2x" media="(min-width: 1200px)">
+                                        <source srcset="./images/team/768/team4-768.jpg 1x, ./images/team/768/team4-768@2x.jpg 2x" media="(min-width: 768px)">
+                                        <source srcset="./images/team/480/team4-480.jpg 1x, ./images/team/480/team4-480@2x.jpg 2x" media="(max-width: 767px)">
+                                        <img src="./images/team/480/team4-480.jpg" alt="Фотография продукт дизайнера"/>
+                                    </picture>
+                                    <!-- <img src="./images/team/1200/team4-1200.jpg" alt="Фотография дизайнера" width="270"/> -->
                                     <div class="person__meta">
                                         <h3 class="person__name">Михаил Ермаков</h3>
                                         <p class="person__position" lang="en">UI Designer</p>

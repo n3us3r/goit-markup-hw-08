@@ -76,6 +76,22 @@
 }
 
 
+.header__contacts-communications-item {
+    position: relative;
+    
+}
+
+.header__contacts-communications-item:not(:last-child):after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 1px;
+    background-color: rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+    top: 11px;
+}
+
+
     .header__envelope-icon,
     .header__phone-icon {
 
