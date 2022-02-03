@@ -1,15 +1,12 @@
 .team {
     background-color: $additional-bg;
-    
-        &__content {
-            padding-top: 60px;
-            padding-bottom:60px;
+    padding-top: 60px;
+    padding-bottom:60px;
 
             @media screen and (min-width: $desktop) {
                 padding-top: 94px;
                 padding-bottom: 94px;
             }
-        }
     
     &__title {
         margin-top: 0;
@@ -24,22 +21,22 @@
             display: flex;
         }
 
-        @media screen and (min-width: $tablet) and (max-width: 1199px) {
-            flex-wrap: wrap;
-            margin-top: -30px;
-            margin-left: -30px;
-        }        
+            @media screen and (min-width: $tablet) and (max-width: 1199px) {
+                flex-wrap: wrap;
+                margin-top: -30px;
+                margin-left: -30px;
+            }        
         
     }
         
     &__item {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-        @media screen and (min-width: $tablet) and (max-width: 1199px) {
-            width: calc((100% - 2 * 30) / 2);
-            margin-top: 30px;
-            margin-left: 30px;
-        }
+            @media screen and (min-width: $tablet) and (max-width: 1199px) {
+                width: calc((100% - 2 * 30) / 2);
+                margin-top: 30px;
+                margin-left: 30px;
+            }
         
         &:not(:last-child) {
 
@@ -53,6 +50,7 @@
             
         }
     }
+    
 }
 
 

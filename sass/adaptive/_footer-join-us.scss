@@ -1,16 +1,11 @@
-.footer__join-us {  
-    margin-bottom: 60px;
+.footer__join-us {
 
-    // =====================================================
-    // Нижний марджин только из макета
-    // =====================================================
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
         margin-left: 165px;
-        margin-bottom: 0;
     }
 
     @media screen and (min-width: 1200px) {
-        margin-left: 70px;        
+        margin-left: 70px;
     }
 
 }
@@ -26,4 +21,8 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
 }

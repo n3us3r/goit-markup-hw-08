@@ -4,6 +4,7 @@
     height: 100%;
 }
 
+
 .product__card-link {
     display: block;
     // display: flex;
@@ -47,6 +48,7 @@
     bottom: 0;
     background-color: $portfolio-hover-effect;
     opacity: 0;
+    
     transform: translateY(100%);
 
     transition: transform $main-transition-time $main-transition-function, opacity $main-transition-time $main-transition-function;
