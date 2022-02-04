@@ -1,8 +1,8 @@
 .header__contacts {
 
     @media screen and (max-width: 767px) {
-        margin-top: 302px;
-        margin-left: 25px;
+        // margin-top: 302px;
+        // margin-left: 25px;
     }
     @media screen and (min-width: $tablet) {
         display:block;
@@ -86,50 +86,31 @@
         font-size: 18px;
         line-height: 1.22;
         letter-spacing: 0.02em;
+        
     }
 }
+
 
 @media screen and (max-width: 767px) {
     .header__contacts-communications-item:not(:last-child) {
-        padding-right: 10px;
-        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        margin-right: 10px;
+        
     }
     .header__contacts-communications-item:not(:first-child) {
         padding-left: 10px;
+        border-left: 1px solid rgba(33, 33, 33, 0.2);
     }
 }
 
+.header__contacts-communications-link {
+    color: $main-text-color;
+    transition: color $main-transition-time $main-transition-function;
+}
 
-// .header__contacts-communications-item:not(:last-child) {
-//     @media screen and (max-width: 767px) {
-//     padding-right: 10px;
-//     border-right: 1px solid rgba(33, 33, 33, 0.2);
-//     }
-
-// .header__contacts-communications-item:not(:first-child) {
-//     @media screen and (max-width: 767px) {
-//     padding-left: 10px;
-//     }
-// }
-
-
-
-
-// .header__contacts-communications-item {
-//     position: relative;
-    
-// }
-
-// .header__contacts-communications-item:not(:last-child):after {
-//     content: '';
-//     position: absolute;
-//     width: 22px;
-//     height: 1px;
-//     background-color: rgba(33, 33, 33, 0.2);
-//     transform: rotate(90deg);
-//     top: 11px;
-// }
-
+.header__contacts-communications-link:hover,
+.header__contacts-communications-link:focus {
+    color: $action-color;
+}
 
     .header__envelope-icon,
     .header__phone-icon {

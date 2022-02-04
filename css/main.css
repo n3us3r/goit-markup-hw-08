@@ -68,23 +68,14 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
 .header__menu-button {
   background-color: transparent;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   padding: 0;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
   border: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media screen and (min-width: 768px) {
@@ -107,26 +98,53 @@ body {
     display: none;
   }
   .header__menu.is-open {
+    border: 1px solid red;
     display: block;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 796px;
-    background-color: teal;
+    height: 100vh;
+    background-color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     top: 0;
     left: 0;
-    padding-left: 15px;
-    padding-right: 15px;
+    z-index: 1;
+    overflow-y: auto;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 25px;
   }
 }
 
+.icon-menu, .icon-cross {
+  fill: currentColor;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .header__menu-button:hover .icon-cross,
-.header__menu-button:hover .icon-menu {
+.header__menu-button:hover .icon-menu,
+.header__menu-button:focus .icon-cross,
+.header__menu-button:focus .icon-menu {
   color: #2196F3;
 }
 
 .header {
   border-bottom: 1px solid #ECECEC;
-  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    position: relative;
+  }
 }
 
 .header__container {
@@ -243,13 +261,6 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .navigation {
-    padding-top: 48px;
-    padding-left: 25px;
-  }
-}
-
-@media screen and (max-width: 767px) {
   .navigation__item {
     font-size: 40px;
     line-height: 1.17;
@@ -282,12 +293,15 @@ body {
 
 .navigation__link {
   color: #212121;
-  -webkit-transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (max-width: 767px) {
   .navigation__link {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     font-size: 40px;
     line-height: 1.17;
     letter-spacing: 0.02em;
@@ -318,13 +332,6 @@ body {
     left: 0;
     bottom: 0;
     border-radius: 2px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .header__contacts {
-    margin-top: 302px;
-    margin-left: 25px;
   }
 }
 
@@ -367,8 +374,8 @@ body {
 
 .header__contacts-link {
   color: #757575;
-  -webkit-transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (max-width: 767px) {
@@ -423,12 +430,23 @@ body {
 
 @media screen and (max-width: 767px) {
   .header__contacts-communications-item:not(:last-child) {
-    padding-right: 10px;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    margin-right: 10px;
   }
   .header__contacts-communications-item:not(:first-child) {
     padding-left: 10px;
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
   }
+}
+
+.header__contacts-communications-link {
+  color: #212121;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__contacts-communications-link:hover,
+.header__contacts-communications-link:focus {
+  color: #2196F3;
 }
 
 .header__envelope-icon,
@@ -507,7 +525,6 @@ body {
   height: 400px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-480.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-480.jpg);
-  background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
 }
@@ -603,8 +620,8 @@ body {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: #2196F3;
   color: #FFFFFF;
-  -webkit-transition: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn--big:hover, .btn--big:focus {
@@ -616,10 +633,10 @@ body {
   line-height: 1.62;
   background-color: #F5F4FA;
   padding: 6px 22px;
-  -webkit-transition: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1), color 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1), color 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1), color 1250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1), color 1250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn--current,
@@ -926,8 +943,8 @@ body {
           align-items: center;
   color: #AFB1B8;
   cursor: pointer;
-  -webkit-transition: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1), color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 1250ms cubic-bezier(0.4, 0, 0.2, 1), color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .communications__link:hover, .communications__link:focus {
@@ -1036,8 +1053,8 @@ body {
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   color: #AFB1B8;
-  -webkit-transition: border 1250ms cubic-bezier(0.4, 0, 0.2, 1), color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border 1250ms cubic-bezier(0.4, 0, 0.2, 1), color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients__link:hover, .clients__link:focus {
@@ -1078,7 +1095,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .footer__container-tablet {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1126,8 +1143,8 @@ body {
 .footer__address-link {
   color: rgba(255, 255, 255, 0.6);
   display: inline-block;
-  -webkit-transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer__address-link:hover, .footer__address-link:focus {
@@ -1191,8 +1208,8 @@ body {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding-left: 16px;
-  -webkit-transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (max-width: 1199px) {
@@ -1350,10 +1367,10 @@ body {
 
 .product__card-link {
   display: block;
-  -webkit-transition: -webkit-box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product__card-link:hover, .product__card-link:focus {
@@ -1375,8 +1392,6 @@ body {
 
 .product__card-thumb {
   position: relative;
-  overflow: hidden;
-  z-index: -1;
   width: 100%;
 }
 
@@ -1395,16 +1410,17 @@ body {
 .product__card-overlay {
   width: 100%;
   height: 100%;
+  overflow: scroll;
   position: absolute;
   bottom: 0;
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product__card-link:hover .product__card-overlay,
@@ -1463,9 +1479,17 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  -webkit-transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: scroll;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 479px) {
+  .backdrop {
+    padding-top: 93px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -1477,11 +1501,22 @@ body {
   position: absolute;
   background-color: #FFFFFF;
   padding: 40px;
-  width: 450px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 479px) {
+  .modal {
+    width: calc(100% - 30px);
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1531,8 +1566,8 @@ body {
   padding-left: 42px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  -webkit-transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__form-label {
@@ -1545,10 +1580,10 @@ body {
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: #757575;
-  -webkit-transition: -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__form-icon {
@@ -1558,8 +1593,8 @@ body {
   fill: currentColor;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__form-comment {
@@ -1572,8 +1607,8 @@ body {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  -webkit-transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (max-width: 1199px) {
@@ -1597,8 +1632,8 @@ body {
   opacity: 0;
   letter-spacing: 0.01em;
   color: #757575;
-  -webkit-transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__form-checkbox,
@@ -1652,16 +1687,16 @@ body {
 
 .modal__form-empty-icon {
   fill: currentColor;
-  -webkit-transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__form-checkbox-icon {
   opacity: 0;
   border-radius: 2px;
   background-color: #2196F3;
-  -webkit-transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__form-license,
@@ -1698,8 +1733,8 @@ body {
   border-radius: 50%;
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__close-btn:hover, .modal__close-btn:focus {
@@ -1711,7 +1746,7 @@ body {
   width: 11px;
   height: 11px;
   fill: currentColor;
-  -webkit-transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*# sourceMappingURL=main.css.map */

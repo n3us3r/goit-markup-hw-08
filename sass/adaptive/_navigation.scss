@@ -1,9 +1,9 @@
-.navigation {
-    @media screen and (max-width: 767px) {
-        padding-top: 48px;
-        padding-left: 25px;
-    }
-}
+// .navigation {
+//     @media screen and (max-width: 767px) {
+//         padding-top: 48px;
+//         padding-left: 25px;
+//     }
+// }
 
 .navigation__item {
 
@@ -38,6 +38,7 @@
     transition: color $main-transition-time $main-transition-function;
     
     @media screen and (max-width: 767px) {
+        display: inline-flex;
         font-size: 40px;
         line-height: 1.17;
         letter-spacing: 0.02em;        

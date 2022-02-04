@@ -22,11 +22,12 @@
         margin-bottom: 60px;
     }
 
-    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    @media screen and (min-width: $tablet) {
         display: flex;
         align-items: baseline;
         justify-content: space-around;
     }
+
 
 }
 

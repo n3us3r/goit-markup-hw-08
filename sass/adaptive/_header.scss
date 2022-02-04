@@ -1,14 +1,15 @@
 .header {
     border-bottom: 1px solid $border-line-color;
-    position: relative;
-    // @media screen and (max-width: 767px) {
-    //     position: relative;
-    // }
+    // position: relative;
+    @media screen and (max-width: 767px) {
+        position: relative;
+    }
 }
 
 .header__container {
     display: flex;
     align-items: center;
+    // position: relative;
 
     @media screen and (max-width: 767px) {
         justify-content: space-between;
