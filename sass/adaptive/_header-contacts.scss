@@ -1,9 +1,9 @@
 .header__contacts {
 
-    @media screen and (max-width: 767px) {
-        // margin-top: 302px;
-        // margin-left: 25px;
-    }
+    // @media screen and (max-width: 767px) {
+    //     margin-top: 302px;
+    //     margin-left: 25px;
+    // }
     @media screen and (min-width: $tablet) {
         display:block;
         margin-left: 84px;
@@ -30,46 +30,39 @@
     }
 
 
-.header__contacts-link  {
-    color: $secondary-text-color;
-    transition: color $main-transition-time $main-transition-function;
-}
 
-@media screen and (max-width: 767px) {
-    .header__contacts-link--mail {
-        font-size: 24px;
-        line-height: 1.16;
-        letter-spacing: 0.02em;
-        
-        }
-        
-        .header__contacts-link--mobile {
-            
+.header__contacts-link--mobile {
+    @media  screen and (max-width: 430px) {
+        font-size: 8vw;
+        color: $action-color;
+    }
+
+
+    @media screen and (min-width: 431px) and (max-width: 767px) {
         font-size: 34px;
         line-height: 1.17;
         letter-spacing: 0.02em;
-        // margin-bottom: 32px;
         color: $action-color;
+        // margin-bottom: 32px;
+        
         padding-top: 0;
-        }    
-}
-
-@media screen and (min-width: $tablet) and (max-width: 1199px) {
-    .header__contacts-link--mail {
-        padding-top: 20px;
-        
-        }
-        
-        .header__contacts-link--mobile {
-            padding-bottom: 20px;
-        }
-}
-
-@media  screen and (max-width: 430px) {
-    .header__contacts-link--mobile {
-        font-size: 8vw;
+    }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        padding-bottom: 20px;
     }
 
+}
+
+.header__contacts-link--mail {
+    @media screen and (max-width: 767px) {
+        font-size: 24px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        padding-top: 20px;
+    }
 }
 
 .header__contacts-communications-list {

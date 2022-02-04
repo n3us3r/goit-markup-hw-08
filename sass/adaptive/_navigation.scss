@@ -5,6 +5,16 @@
 //     }
 // }
 
+.navigation__list {
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
 .navigation__item {
 
     @media screen and (max-width: 767px) {
@@ -25,14 +35,6 @@
     }
 }
 
-.navigation__list {
-
-    @media screen and (min-width: $tablet) {
-        display: flex;
-        align-items: center;
-    }
-}
-
 .navigation__link {
     color: $main-text-color;
     transition: color $main-transition-time $main-transition-function;
@@ -49,6 +51,9 @@
         letter-spacing: 0.02em;
 
         position: relative;
+
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 
@@ -57,7 +62,6 @@
 }
 
 
-        
 .navigation__link--current::after {
     @media screen and (min-width: 768px) {
 
@@ -75,8 +79,3 @@
     border-radius: 2px;
     }    
 }
-
-
-
-
-
