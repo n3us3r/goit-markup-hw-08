@@ -248,6 +248,8 @@ body {
   .header__contacts-link {
     font-size: 14px;
     line-height: 1.14;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -345,6 +347,12 @@ body {
 @media screen and (min-width: 1200px) {
   .header__contacts {
     margin-left: 304px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
