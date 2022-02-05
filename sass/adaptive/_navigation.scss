@@ -1,12 +1,10 @@
-// .navigation {
-//     @media screen and (max-width: 767px) {
-//         padding-top: 48px;
-//         padding-left: 25px;
-//     }
-// }
+.navigation {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 32px;
+    }
+}
 
 .navigation__list {
-
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;

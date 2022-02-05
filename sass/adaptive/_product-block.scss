@@ -1,12 +1,6 @@
-.product {
-    // display: block;
-    display: flex;
-    height: 100%;
-}
-
-
 .product__card-link {
     display: block;
+    height: 100%;
     // display: flex;
 
 
@@ -27,15 +21,7 @@
     position: relative;
     
     width: 100%;
-
-    @media screen and (min-width: $tablet) {
-        width: 354px;
-        
-    }
-
-    @media screen and (min-width: $desktop) {
-        width: 370px;
-    }
+    overflow: hidden;
 }
 
 .product__card-overlay {

@@ -1,4 +1,4 @@
-.benefits-card__icon-box {
+.benefits__icon-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,13 +9,13 @@
     background-color: $additional-bg; 
 }
 
-.benefits-card__icon {
+.benefits__icon {
     width: 70px;
     height: 70px;
     fill: currentColor;
 }
 
-.benefits-card__subtitle{
+.benefits__subtitle{
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -28,7 +28,7 @@
     }
 }
 
-.benefits-card__text {
+.benefits__text {
     color: $secondary-text-color;
     font-size: 14px;
     line-height: 1.7;
