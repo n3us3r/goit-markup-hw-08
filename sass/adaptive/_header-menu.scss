@@ -1,6 +1,12 @@
 @media screen and (max-width: 767px) {
     .header__menu {
-        display: none;
+        // display: none;
+        // appearance: none;
+        opacity: 0;
+        outline: solid 1px red;
+        transition: opacity 1500ms linear;
+        position: absolute;
+
     }
 
     .header__menu-button .icon-cross {
@@ -47,6 +53,10 @@
         // overflow-y: auto;
 
         padding: 48px 25px;
+        
+        
+        opacity: 1;
+        
 
     }
 
